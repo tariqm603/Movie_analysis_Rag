@@ -47,7 +47,7 @@ def get_movie_analysis(query, dataset):
 
 # Streamlit UI
 st.title("Movie Analyzer")
-st.write("Enter a movie title to get analysis and recommendations.")
+st.write("Enter a movie title to get analysis")
 
 # User input
 user_query = st.text_input("Enter movie title", "")
@@ -57,7 +57,7 @@ if user_query:
     analysis_result, suggestions = get_movie_analysis(user_query, movies_data)
     
     if suggestions:
-        st.subheader("Here are 5 similar movies you might be interested in:")
+        st.subheader("")
         for i, title in enumerate(suggestions, start=1):
             st.write(f"{i}. {title}")
         
